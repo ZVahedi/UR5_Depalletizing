@@ -1,5 +1,5 @@
 # UR5_Depalletizing
-This repository contains aURscript code for a UR5e robot to perform a de-palletizing task. It is a depalletizing program, meaning the parts are picked from a pallet and placed in front of the worker/participant. After selecting the "depalletizing" in the Wizard section of the Polyscope.
+This repository contains a URscript code for a UR5e robot to perform a de-palletizing task. It is a depalletizing program, meaning the parts are picked from a pallet and placed in front of the worker/participant. After selecting the "depalletizing" in the Wizard section of the Polyscope.
 
 Originally developed in Polyscope, hence it is presented in a text file here. This script demonstrates robot motion planning, gripper control, and logic for item handling in a pallet pattern.
 
