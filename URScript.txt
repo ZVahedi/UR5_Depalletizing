@@ -1,46 +1,44 @@
-1   Variables Setup
+   # Variables Setup
 
-2   Robot Program
-3       Gripper Activate
-4       total_1_layer := 6 * 1
-5       If ((Pallet_counter - 2) % total_1_layer == 0) and (Pallet_counter ≠ 0)
-6           Wait: 40.0
-            Comment: Wait after picking the 1st part
-7       If ((Pallet_counter + 2) % total_1_layer == 0) and (Pallet_counter ≠ 0)
-8           Wait: 12.0
-9           Comment: Wait after picking the 3rd part
-10      If ((Pallet_counter) % total_1_layer == 0) and (Pallet_counter ≠ 0)
-11          Wait: 12.0
-12          Comment: Wait after picking the 5th part
-13      If ((Pallet_counter - ) % total_1_layer == 0)
-14          Wait: 8.0
-15          Comment: Wait after picking the 6th part
-16      Set Pallet_counter := 0
-17      Loop 2 times
-18          Pallet_1
+   # Robot Program
+       Gripper Activate
+       total_1_layer := 6 * 1
+       If ((Pallet_counter - 2) % total_1_layer == 0) and (Pallet_counter ≠ 0)
+           Wait: 40.0
+            # Comment: Wait after picking the 1st part
+       If ((Pallet_counter + 2) % total_1_layer == 0) and (Pallet_counter ≠ 0)
+           Wait: 12.0
+           # Comment: Wait after picking the 3rd part
+      If ((Pallet_counter) % total_1_layer == 0) and (Pallet_counter ≠ 0)
+          Wait: 12.0
+          # Comment: Wait after picking the 5th part
+      If ((Pallet_counter - ) % total_1_layer == 0)
+          Wait: 8.0
+          # Comment: Wait after picking the 6th part
+      Set Pallet_counter := 0
 
-19  Pallet_1
-20      Patterns
-21          Grid_Pattern_1
-22              top_right_1st
-23              top_left_2nd
-24              down_left_3rd
-25              down_right_4th
+  # Pallet_1
+      # Patterns
+          # Grid_Pattern_1
+              top_right_1st
+              top_left_2nd
+              down_left_3rd
+              down_right_4th
 
-26      Layers
-27          At Each Item
-28              MoveL
-29                  Home
-30                  dropping_location
-31              Gripper Move 51% (1)
-32              Generated Movements
-33                  MoveL Approach_pallet
-35                  MoveL ToolActionPoint
-36                      Tool action
-37                          Gripper Close (1)
-38                  MoveL moving_up
-39                  MoveL Exit_pallet
+      # Layers
+          # At Each Item
+              MoveL
+                  Home
+                  dropping_location
+              Gripper Move 51% (1)
+              Generated Movements
+                  MoveL Approach_pallet
+                  MoveL ToolActionPoint
+                      Tool action
+                          Gripper Close (1)
+                  MoveL moving_up
+                  MoveL Exit_pallet
 
 
-41  Action after palletizing
-42      Wait: 0.001
+  # Action after palletizing
+      Wait: 0.001
